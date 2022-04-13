@@ -5,6 +5,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.json.JacksonJsonParser;
 import org.springframework.stereotype.Component;
@@ -21,6 +22,7 @@ public class TokenUtil {
 
 	@Value("${security.oauth2.client.client-secret}")
 	private String clientSecret;
+	
 	
 	public String obtainAccessToken(MockMvc mockMvc, String username, String password) throws Exception {
 
