@@ -26,7 +26,7 @@ public class UserController {
 		return ResponseEntity.ok().body(dto);
 	}
 	
-	@PreAuthorize("hasAnyRole('VISITOR','MEMBER')") 
+	//@PreAuthorize("hasAnyRole('VISITOR','MEMBER')") 
 	@GetMapping(value = "/profile")
     public ResponseEntity<UserDTO> getProfile() {
         UserDTO dto = service.getProfile();
